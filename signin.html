@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        #all{
+            background-color: rgb(5,5,5);
+            display: flex;
+	    padding:5px 25px;
+            flex-direction: column;
+            order: 1;
+            display:none;
+        }
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 50px 1000px;
+        }
+        #signup,#signin{
+            display: none;
+        }
+        label[for="signin"],label[for="signup"]{
+            padding: 10px 20px;
+            border: 1px solid white;
+            margin: 3px;
+        }
+        input:checked + label + #all{
+            display: block;
+        }
+        input:checked + label{
+            background-color: rgba(5,5,5);
+        }
+        input:hover + label{
+            border: 1px solid black;
+        }
+        b{
+            color: white;
+            font-weight:900px;
+            font-family: century;
+            font-size: 30px;
+            text-align: center;
+            margin: 10px 0px;
+        }
+        input[type=text]{
+            padding: 10px 15px;
+            font-family: cursive;
+            font-size: 20px;
+            border: 1px solid rgb(100,100,100);
+            border-radius: 15px;
+            background-color: rgb(55, 55, 55);
+            margin: 5px 0px;
+            color: white;
+        }
+        select{
+            width: 32%;
+            padding: 5px 10px;
+            margin: 5px 0px;
+        }
+        #gender{
+            color: white;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            margin: 12px;
+        }
+        #submit{
+            padding: 10px 40px;
+            background-color: rgb(55, 55, 55);
+            border: 1px solid rgb(100,100,100);
+            border-radius: 24px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        #submit:hover{
+            padding: 10px 50px;
+            transition: all .3s linear;
+        }
+        #sub{
+            display: flex;
+            justify-content: center;
+        }
+        span{
+            margin: 0 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input id="signup" type="radio" name="click">
+        <label for="signup"><b>SIGNUP</b></label>
+        <div id="all">
+            <input type="text" id="username" placeholder="Enter Username:">
+            <input type="text" id="password" placeholder="Enter Password:">
+            <input type="text" id="email" placeholder="Enter Email:">
+            <nav id="select">
+            <select aria-placeholder="">
+                <option>1999</option>
+            </select>
+            <select aria-placeholder="Month">
+                <option>Janaury</option>
+            </select>
+            <select aria-placeholder="Day">
+                <option>1</option>
+            </select>
+            </nav>
+            <nav id="gender">
+            <span><input type="radio" name="gender" id="male"><label for="male" id="m">Male</label></span>
+            <span><input type="radio" name="gender" id="female"><label for="female" id="f">Female</label></span>
+            </nav>
+            <nav id="sub">
+            <button type="submit" id="submit" onclick="signup()">SUBMIT</button>
+            </nav>
+        </div>
+        <input id="signin" type="radio" name="click" checked="checked">
+        <label for="signin"><b>SIGNIN</b></label>
+        <div id="all">
+            <input type="text" id="username" placeholder="Enter Username:">
+            <input type="text" id="password" placeholder="Enter Password:">
+            <nav id="sub">
+                <button type="submit" id="submit" onclick="signup()">SUBMIT</button>
+            </nav>
+        </div>
+    </div>
+
+</body>
+</html>
